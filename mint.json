@@ -54,6 +54,20 @@
       ]
     },
     {
+      "group": "Guides",
+      "pages": [
+        {
+          "group": "Chatbot",
+          "pages": [
+            "guides/bots/create-a-chatbot",
+            "guides/bots/deleting-a-chatbot"
+          ]
+        
+        }
+   
+      ]
+    },
+    {
       "group": "Essentials",
       "pages": [
         "essentials/markdown",
