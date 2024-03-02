@@ -1,0 +1,70 @@
+---
+title: "Update Product"
+description: ""
+---
+
+
+## Endpoint
+
+```
+PATHC https://s5hxhnuksu6hwzu6dvnquqzw7q0nrqxe.lambda-url.us-east-1.on.aws/widget/products/{id}
+```
+
+## Request Headers
+
+The API request must include the following headers:
+
+- `x-api-key: <Your-Secret-Key>` - The secret key for authenticating the API request.
+
+## PATH PARAMETERS
+
+<ResponseField name="id" type="string" required>
+Id of the chatbot
+</ResponseField>
+
+## Request Body
+
+<ResponseField name="name" type="string" >
+Name
+</ResponseField>
+<ResponseField name="description" type="string" >
+Description
+</ResponseField>
+<ResponseField name="updated" type="string<date-time>" >
+Updated
+</ResponseField>
+<ResponseField name="image" type="string" >
+image Url
+</ResponseField>
+<ResponseField name="url" type="string" >
+ Url
+</ResponseField>
+
+
+## Responses
+
+- 201 Successful Response
+
+- 422 Validation Error
+
+<CodeGroup>
+
+```json 201
+null
+```
+
+```json 422
+{
+  "detail": [
+    {
+      "loc": [
+        "string"
+      ],
+      "msg": "string",
+      "type": "string"
+    }
+  ]
+}
+```
+
+</CodeGroup>

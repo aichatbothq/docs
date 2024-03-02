@@ -1,0 +1,67 @@
+---
+title: ""
+description: ""
+---
+
+
+## Endpoint
+
+```
+GET https://s5hxhnuksu6hwzu6dvnquqzw7q0nrqxe.lambda-url.us-east-1.on.aws/widget/products/manual
+```
+
+## Request Headers
+
+The API request must include the following headers:
+
+- `x-api-key: <Your-Secret-Key>` - The secret key for authenticating the API request.
+
+## Request Body
+
+<ResponseField name="file" type="string<binary>">
+File
+</ResponseField>
+<ResponseField name="title" type="string" required>
+Title
+</ResponseField>
+<ResponseField name="description" type="string" required>
+Description
+</ResponseField>
+<ResponseField name="uploaded" type="string" >
+Uploaded
+</ResponseField>
+<ResponseField name="image_url" type="string" >
+image Url
+</ResponseField>
+<ResponseField name="product_url" type="string" required>
+Product Url
+</ResponseField>
+
+
+## Responses
+
+- 201 Successful Response
+
+- 422 Validation Error
+
+<CodeGroup>
+
+```json 201
+null
+```
+
+```json 422
+{
+  "detail": [
+    {
+      "loc": [
+        "string"
+      ],
+      "msg": "string",
+      "type": "string"
+    }
+  ]
+}
+```
+
+</CodeGroup>

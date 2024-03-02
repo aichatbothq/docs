@@ -1,12 +1,12 @@
 ---
-title: "Fetch chatbots"
-description: 'How to fetch chatbot by its ID.'
+title: "Get a Product"
+description: "This page helps you get a product."
 ---
 
 ## Endpoint
 
 ```
-GET https://s5hxhnuksu6hwzu6dvnquqzw7q0nrqxe.lambda-url.us-east-1.on.aws/bots
+GET https://s5hxhnuksu6hwzu6dvnquqzw7q0nrqxe.lambda-url.us-east-1.on.aws/widget/products
 ```
 
 ## Request Headers
@@ -15,11 +15,9 @@ The API request must include the following headers:
 
 - `x-api-key: <Your-Secret-Key>` - The secret key for authenticating the API request.
 
-## QUERY PARAMETERS
+## Query Parameters
 
-<ResponseField name="owner" type="string" required>
-Owner Id of the chatbot.
-</ResponseField>
+<ResponseField name="bot" type="string<bot>" required>
 
 ## Responses
 
@@ -29,7 +27,7 @@ Owner Id of the chatbot.
 
 <CodeGroup>
 
-```json 200
+```json 201
 null
 ```
 

@@ -1,4 +1,50 @@
 ---
-title: "Message a Chatbot"
-description: "This page helps you message a Chatbot."
+title: "Fetch Single Chatbot"
+description: ""
 ---
+
+## Endpoint
+
+```
+GET https://s5hxhnuksu6hwzu6dvnquqzw7q0nrqxe.lambda-url.us-east-1.on.aws/bots/{id}
+```
+
+## Request Headers
+
+The API request must include the following headers:
+
+- `x-api-key: <Your-Secret-Key>` - The secret key for authenticating the API request.
+
+## PATH PARAMETERS
+
+<ResponseField name="id" type="string" required>
+Id of the chatbot
+</ResponseField>
+
+## Responses
+
+- 200 Successful Response
+
+- 422 Validation Error
+
+<CodeGroup>
+
+```json 200
+null
+```
+
+```json 422
+{
+  "detail": [
+    {
+      "loc": [
+        "string"
+      ],
+      "msg": "string",
+      "type": "string"
+    }
+  ]
+}
+```
+
+</CodeGroup>

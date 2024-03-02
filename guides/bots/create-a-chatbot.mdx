@@ -107,7 +107,12 @@ Role of the chatbot.
     <ResponseField name="deck_ai_branding" type="boolean" default="false">
       Deck AI branding of the bot
     </ResponseField>
-
+    <ResponseField name="position_left" type="boolean" default="false">
+    Chatbot position
+    </ResponseField>
+    <ResponseField name="chat_inputbox_placeholder" type="string" required>
+    Chat inputbox placeholder
+    </ResponseField>
   </Expandable>
 </ResponseField>
 
@@ -122,13 +127,85 @@ GPT API Key
 Human support email
 </ResponseField>
 
+## Request Body Example
+
+<CodeGroup>
+
+```json JSON
+{
+  "name": "string",
+  "featured": [
+    null
+  ],
+  "products": [],
+  "email_support": true,
+  "owner": "string",
+  "image": "string",
+  "active": true,
+  "created": "2024-03-01T22:14:49.048440",
+  "modified": "2024-03-01T22:14:49.048444",
+  "role": "customer_support",
+  "customize": {
+    "color": "string",
+    "conversation_style": "chat",
+    "language": "english",
+    "company_name": "string",
+    "welcome_message": "string",
+    "schedule_demo_link": "string",
+    "sub_heading": "string",
+    "offline_messages": false,
+    "deck_ai_branding": false,
+    "suggested_questions": [
+      {
+        "question": "string",
+        "response": "string"
+      }
+    ],
+    "notifications": {
+      "push": false,
+      "email": false
+    },
+    "position_left": false,
+    "chat_inputbox_placeholder": "string"
+  },
+  "is_gpt_4": false,
+  "gpt_api_key": "string",
+  "human_support_email": "user@example.com"
+}
+```
+
+</CodeGroup>
+
 ## Responses
 
-201 Successful Response
-RESPONSE SCHEMA: application/json
-any
-422 Validation Error
+- 201 Successful Response
 
+- 422 Validation Error
+
+<CodeGroup>
+
+```json 201
+null
+```
+
+```json 422
+{
+  "detail": [
+    {
+      "loc": [
+        "string"
+      ],
+      "msg": "string",
+      "type": "string"
+    }
+  ]
+}
+```
+
+</CodeGroup>
+
+
+## Example Request
 
 
 
